@@ -1,0 +1,15 @@
+{
+  "name": "fullstack",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-material": "~0.11.4",
+    "angular-ui-router": "~0.2.15",
+    "angular-resource": "~1.4.7",
+    "ngstorage": "~0.3.9",
+    "angular-mocks": "~1.4.7"
+  },
+  "devDependencies": {
+    "angular-xeditable": "~0.1.9"
+  }
+}
