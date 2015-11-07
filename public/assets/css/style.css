@@ -1,0 +1,93 @@
+/*home nav bar*/
+#nav-bar {
+  background-color: rgba(144,202,249, 0.7);
+}
+.md-title {
+  color: #FFFFFF;
+  font-size: 135%;
+}
+.doc-icon {
+  margin-top: 0.35em;
+}
+
+.doc-icon-right {
+  margin-top: 0.7em;
+}
+
+/*login page*/
+#log-form {
+  width: 30em;
+  margin: 0 auto;
+  margin-top: 10em;
+  background-color: rgba(255, 255, 255, 0.96);
+  border-radius: 0.3em;
+}
+
+.log-but {
+  color: rgba(144,202,249,1);
+}
+
+/*signup page*/
+#sign-form {
+  margin-top: 5em;
+  background-color: rgba(255, 255, 255, 0.96);
+  border-radius: 0.3em;
+}
+
+.sign-but {
+  color: #90CAF9;
+}
+
+/*floating action button*/
+#fab {
+  margin-top: -0.8em;
+  color: black;
+}
+
+/*dashboard*/
+#dash {
+  width: 65em;
+  margin: 0 auto;
+  margin-top: 1em;
+  border-radius: 0.3em;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+#tab-tab {
+  background-color: rgba(144,202,249, 0.6);
+}
+
+#doc-tabs {
+  background: #fbfbfb;
+}
+
+#cDoc-but {
+  color: #90CAF9; 
+  margin-left: -1.2em;
+}
+
+/*user profile*/
+.profile-pic {
+  height: 10em;
+  width: 10em;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+
+.card {
+  width: 25em;
+  margin: 0 auto;
+}
+
+.pro-text p {
+  font-size: 1.4em;
+  text-align: center;
+}
+
+#prof {
+  width: 26em;
+  margin: 0 auto;
+  margin-top: 4em;
+  border-radius: 0.3em;
+  background-color: rgba(255, 255, 255, 0.7);
+}

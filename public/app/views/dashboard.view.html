@@ -1,0 +1,67 @@
+<ng-include src="'app/views/dashNavBar.view.html'"></ng-include>
+
+  <div style='position:absolute;z-index:0;left:0;top:0;width:100%;height:100%'>
+    <img src='../assets/imgs/dash.jpg' style='width:100%;height:100%'/>
+  </div>
+
+  <div ng-controller="DocumentCtrl" class="sample" layout="column" ng-cloak id="dash1">
+    <md-content class="md-padding" data-ng-init="getUserDocs()" id="dash">
+        
+      <div ng-cloak>
+      <md-content flex layout-padding>
+        <md-tabs md-dynamic-height md-border-bottom id="tab-tab" class="md-whiteframe-z1">
+          <md-tab style="color: black" label="{{userDoc.title}}" ng-repeat="userDoc in userDocs">
+            <md-content flex layout-padding id="doc-tabs">
+              <p>{{userDoc.content}}</p>
+              <p>Date Created: {{userDoc.dateCreated | date}}</p>
+              <p>Date Modified: {{userDoc.lastModified | date}}</p>
+              <md-button ng-click="getDoc(userDoc._id); editDocEv($event)" style="color: #90CAF9;margin-left: -1em;">EDIT</md-button>
+              <md-button ng-click="getDoc(userDoc._id); deleteDocEv($event)" style="color: #FF0000;margin-left: -1em;">DELETE</md-button>
+            </md-content>
+          </md-tab>
+        </md-tabs>
+      </md-content>
+      </div>
+
+      <md-content class="md-padding">
+        <form>
+          <h3>ADD A NEW DOCUMENT</h3>
+
+          <md-input-container>
+            <label for="label">Title</label>
+            <input ng-model="docs.title" type="text" ng-required="true">
+          </md-input-container>
+
+          <md-input-container>
+            <label for="content">Content</label>
+            <textarea aria-label="..." ng-model="docs.content" columns="2" md-maxlength="1000" ng-required="true"></textarea>
+          </md-input-container>
+          <md-button ng-click="createDoc()" id="cDoc-but" type="submit">Add</md-button>
+   
+        </form>
+      </md-content> 
+
+    </md-content>
+  </div>
+
+
+
+<!-- <ng-include src="'app/views/dashNavBar.view.html'"></ng-include>
+
+  <div style='position:absolute; padding-top: 70px; left:0; top:0; width:100%; height:100%; background: url("../assets/imgs/dash.jpg")'>
+
+    <md-card ng-controller="DocumentCtrl" class="card" data-ng-init="getUser(); getUserDocs()">
+      <img ng-src="../assets/imgs/profile-pic.jpg" class="profile-pic">
+      <md-card-content class="pro-text">
+        <p>{{users.username}}</p>
+        <p>{{users.name.first}}</p>
+        <p>{{users.name.last}}</p>
+        <p>You have {{userDocs.length}} Documents</p>
+      </md-card-content>
+      <div class="md-actions" layout="row" layout-align="center center">
+        <md-button ng-click="editUserEv($event)" style="color: #90CAF9;">EDIT PROFILE</md-button>
+        <md-button ng-click="getDoc(userDoc._id); deleteUserEv($event)" style="color: #FF0000">DELETE PROFILE</md-button>
+      </div>
+    </md-card>
+  </div>
+ -->
