@@ -66,6 +66,10 @@
   margin-left: -1.2em;
 }
 
+md-tabs > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {
+  color: rgb(0, 0, 0);
+}
+
 /*user profile*/
 .profile-pic {
   height: 10em;
