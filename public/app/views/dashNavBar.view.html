@@ -5,24 +5,36 @@
     <h4 class="md-title">DOC CACHE</h4>
 
     <span flex></span>
+    
+    <div layout="column" ng-controller="DashboardCtrl as demo" ng-cloak>
+   
+      <md-fab-speed-dial md-direction="left" md-open="demo.isOpen">
+        <md-fab-trigger>
+          <md-button aria-label="menu" class="md-fab md-primary">
+            <div class="doc-icon-right"><ng-md-icon icon="more_vert" style="fill: white" size="32"></ng-md-icon></div>
+          </md-button>
+        </md-fab-trigger>
 
-    <md-fab-speed-dial id="fab" md-direction="left" class="md-scale md-fab-top-right">
-      <md-fab-trigger>
-        <md-button aria-label="menu" class="md-fab md-primary">
-          <div class="doc-icon-right"><ng-md-icon icon="more_vert" style="fill: white" size="32"></ng-md-icon></div>
-        </md-button>
-      </md-fab-trigger>
+        <md-fab-actions>
 
-      <md-fab-actions>
-        <md-button class="md-fab md-raised md-mini" href="/#/profile">
-          <md-tooltip md-direction="bottom">VIEW PROFILE</md-tooltip>
-        </md-button>
+          <div ng-repeat="item in demo.items">
+            <md-button aria-label="{{item.name}}" class="md-fab md-raised md-mini"ng-href="{{item.href}}">
+              <md-tooltip md-direction="bottom" md-visible="tooltipVisible">
+                {{item.name}}
+              </md-tooltip>
+              <md-icon md-svg-src="{{item.icon}}" style="fill: #90CAF9" aria-label="{{item.name}}"></md-icon>
+            </md-button>
+          </div>
 
-        <md-button class="md-fab md-raised md-mini" ng-controller="UserCtrl" ng-click="logout()">
-          <md-tooltip md-direction="bottom">LOGOUT</md-tooltip>
-        </md-button>
-      </md-fab-actions>
-    </md-fab-speed-dial>
+            <md-button aria-label="Logout" class="md-fab md-raised md-mini" ng-controller="UserCtrl" ng-click="logout()">
+              <md-tooltip md-direction="bottom" md-visible="tooltipVisible">Logout</md-tooltip>
+              <md-icon md-svg-src="../assets/imgs/logout.svg" style="fill: #90CAF9" aria-label="logout"></md-icon>
+            </md-button>
+
+        </md-fab-actions>
+      </md-fab-speed-dial>
+
+    </div>
 
   </div>
 </md-toolbar>
