@@ -3,7 +3,7 @@ angular.module('dmsApp')
 
     $scope.createDoc = function() {
       DocumentService.createDoc($scope.docs).then(function(res) {
-        $window.location.reload();
+        location.reload();
       }, function(err) {
       });
     };
@@ -28,7 +28,7 @@ angular.module('dmsApp')
     $scope.editDoc = function(doc) {
       var id = $window.sessionStorage.docId;
       DocumentService.editDoc(id, doc).then(function(res) {
-        $window.location.reload();
+        location.reload();
         $location.url('/dashboard');
       }, function(err) {
         console.log(err);
@@ -62,7 +62,7 @@ angular.module('dmsApp')
       id = $window.sessionStorage.docId;
       console.log(id);
       DocumentService.deleteDoc(id).then(function(res) {
-        $window.location.reload();
+        location.reload();
         $location.url('/dashboard');
       }, function(err) {
       });

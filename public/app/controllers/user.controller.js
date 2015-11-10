@@ -1,5 +1,5 @@
 angular.module('dmsApp')
-  .controller('UserCtrl', ['$scope', 'UserService', '$location', '$resource', '$mdDialog', '$window', '$http', function($scope, UserService, $location, $resource, $mdDialog, $window, $http) {
+  .controller('UserCtrl', ['$scope', '$rootScope', 'UserService', '$location', '$resource', '$mdDialog', '$window', '$http', function($scope, $rootScope, UserService, $location, $resource, $mdDialog, $window, $http) {
 
     $scope.saveSessStorage = function(id, token) {
       $window.sessionStorage.token = token;
