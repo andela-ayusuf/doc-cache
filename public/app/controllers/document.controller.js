@@ -1,12 +1,16 @@
 angular.module('dmsApp')
-  .controller('DocumentCtrl', ['DocumentService', '$window', '$scope', '$mdDialog', '$location', '$localStorage', function(DocumentService, $window, $scope, $mdDialog, $location, $localStorage) {
+  .controller('DocumentCtrl', ['DocumentService', 'ToastService', '$window', '$scope', '$mdDialog', '$location', '$localStorage', function(DocumentService, ToastService, $window, $scope, $mdDialog, $location, $localStorage) {
 
+    // this function creates a new document
     $scope.createDoc = function() {
       DocumentService.createDoc($scope.docs).then(function(res) {
         location.reload();
+        ToastService.showSimpleToast(res.data.message);
       }, function(err) {
       });
     };
+
+    // this function returns all user documents
     $scope.getUserDocs = function() {
       var id = $window.sessionStorage.userId;
       DocumentService.getUserDocs(id).then(function(res) {
@@ -14,10 +18,14 @@ angular.module('dmsApp')
       }, function(err) {
       });
     };
+
+    // this function returns a documents id
     $scope.getDocId = function() {
       var id = $window.sessionStorage.docId;
       return id;
     };
+
+    // this function returns a single document
     $scope.getDoc = function(id) {
       $window.sessionStorage.docId = id;
       DocumentService.getDoc(id).then(function(res) {
@@ -25,15 +33,19 @@ angular.module('dmsApp')
       }, function(err) {
       });
     };
+
+    // this function enables the editing of documents
     $scope.editDoc = function(doc) {
       var id = $window.sessionStorage.docId;
       DocumentService.editDoc(id, doc).then(function(res) {
         location.reload();
         $location.url('/dashboard');
+        ToastService.showSimpleToast(res.data.message);
       }, function(err) {
-        console.log(err);
       });
     };
+
+    // this function shows the edit document modal
     $scope.editDocEv = function(ev) {
       $mdDialog.show({
         controller: docEvCtrl,
@@ -42,6 +54,8 @@ angular.module('dmsApp')
         targetEvent: ev
       });
     };
+
+    // this function shows the delete document modal
     $scope.deleteDocEv = function(ev) {
       $mdDialog.show({
         controller: docEvCtrl,
@@ -58,14 +72,17 @@ angular.module('dmsApp')
         $mdDialog.cancel();
       };
     }
+
+    // this function deletes a document
     $scope.deleteDoc = function(id) {
       id = $window.sessionStorage.docId;
-      console.log(id);
       DocumentService.deleteDoc(id).then(function(res) {
         location.reload();
         $location.url('/dashboard');
+        ToastService.showSimpleToast(res.data.message);
       }, function(err) {
       });
     };
     
   }]);
+
