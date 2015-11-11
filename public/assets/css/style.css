@@ -1,6 +1,22 @@
+/*home page*/
+.home {
+  margin-top: 3em;
+  position: relative;
+  /*color: white;*/
+  text-align: center;
+  font-size: 2em;
+}
+
+h1 { 
+  position: relative;
+  /*color: white;*/
+  text-align: center;
+  font-size: 6em;
+}
+
 /*home nav bar*/
 #nav-bar {
-  background-color: rgba(144,202,249, 0.7);
+  background-color: rgba(144,202,249, 0.6);
 }
 .md-title {
   color: #FFFFFF;
