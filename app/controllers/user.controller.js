@@ -1,6 +1,5 @@
 var jwt = require('jsonwebtoken');
 var User = require('../models/user.model');
-// var Document = require('../models/document.model');
 var config = require('../../config/config');
 
 // this method creates a new document
@@ -45,7 +44,7 @@ exports.createUser = function(req, res) {
       res.status(200).send({
         success: true,
         token: token,
-        message: 'User Created.',
+        message: 'Welcome ' + user.username,
         id: user._id
       });
     }
@@ -81,7 +80,7 @@ exports.login = function(req, res) {
         });
         res.json({
           success: true,
-          message: 'Token generated.',
+          message: 'Welcome ' + user.username,
           token: token,
           id: user._id
         });
@@ -166,7 +165,7 @@ exports.editUser = function(req, res) {
   User.findByIdAndUpdate(req.params.id, req.body, function(err, user) {
     res.send({
       success: true,
-      message: 'User Updated!'
+      message: 'Account Updated!'
     });
   });
 };
@@ -180,7 +179,7 @@ exports.deleteUser = function(req, res) {
     else {
       res.send({
         success: true,
-        message: 'User Deleted'
+        message: 'Account Deleted'
       });
     }
   });
