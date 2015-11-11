@@ -48,7 +48,6 @@ describe('Document Controller', function() {
     expect(scope.getUserDocs).toBeDefined();
     expect(doc1.title).toBe('exodus');
     expect(doc2.title).toBe('the heathen');
-    // console.log(scope.userDocs.length)
     httpBackend.flush();  
   });
 

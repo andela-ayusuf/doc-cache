@@ -233,7 +233,7 @@ describe('User route test', function() {
     .end(function(err, res){
       expect(res.body).toEqual(jasmine.objectContaining( {
         success: true,
-        message: 'User Updated!'}));
+        message: 'Account Updated!'}));
       done();
     });
   });
@@ -244,7 +244,7 @@ describe('User route test', function() {
     .end(function(err, res){
       expect(res.body).toEqual(jasmine.objectContaining({
         success: true, 
-        message: 'User Deleted'}));
+        message: 'Account Deleted'}));
       done();
     });
   });
