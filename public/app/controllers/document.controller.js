@@ -7,6 +7,7 @@ angular.module('dmsApp')
         location.reload();
         ToastService.showSimpleToast(res.data.message);
       }, function(err) {
+        ToastService.showSimpleToast('Please Fill The Required Fields!');
       });
     };
 
@@ -42,6 +43,7 @@ angular.module('dmsApp')
         $location.url('/dashboard');
         ToastService.showSimpleToast(res.data.message);
       }, function(err) {
+        ToastService.showSimpleToast('Please Fill The Required Fields!');
       });
     };
 
