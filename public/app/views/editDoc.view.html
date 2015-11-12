@@ -1,24 +1,18 @@
 <div ng-controller="DocumentCtrl" aria-label="..." data-ng-init="getDoc(getDocId())">
-
   <md-content class="md-padding" style="width: 50em;">
     <form ng-repeat="doc in docs">
-    
       <md-input-container>
         <label for="label">Title</label>
         <input aria-label="..." ng-model="doc.title" type="text" ng-required="true">
       </md-input-container>
-
       <md-input-container>
         <label for="content">Content</label>
         <textarea aria-label="..." ng-model="doc.content" columns="2" md-maxlength="1000" ng-required="true"></textarea>
       </md-input-container>
-
       <div class="md-actions" layout="row" layout-align="center center">
-      <md-button ng-click ="hide()" style="color: #FF0000;">Cancel</md-button>
-      <md-button ng-click="editDoc(doc)" style="color: #90CAF9;" type="submit">Save</md-button>
+        <md-button ng-click="hide()" style="color: #FF0000;">Cancel</md-button>
+        <md-button ng-click="editDoc(doc)" style="color: #90CAF9;" type="submit">Save</md-button>
       </div>
-
     </form>
   </md-content>
-
 </div>

@@ -1,12 +1,9 @@
 <div ng-controller="UserCtrl" data-ng-init="getUser(getUserId())">
-
   <md-content class="md-padding" style="width: 50em;">
     <strong>If you do this, bad things could happen...</strong>
-      <div class="md-actions" layout="row" layout-align="center center">
-        <md-button ng-click=" hide()" style="color: #FF0000;">Cancel</md-button>
-        <md-button ng-click ="deleteUser(user); hide()" style="color: #90CAF9;" type="submit">Delete</md-button>
-      </div>
+    <div class="md-actions" layout="row" layout-align="center center">
+      <md-button ng-click=" hide()" style="color: #FF0000;">Cancel</md-button>
+      <md-button ng-click="deleteUser(user); hide()" style="color: #90CAF9;" type="submit">Delete</md-button>
+    </div>
   </md-content>
-
 </div>
-

@@ -1,35 +1,26 @@
 <div ng-controller="UserCtrl" data-ng-init="getUser(getUserId())">
-
   <md-content class="md-padding" style="width: 50em;">
     <form>
-    
       <md-input-container>
         <label for="label">Username</label>
         <input ng-model="users.username" type="text">
       </md-input-container>
-
       <md-input-container>
         <label for="label">Firstname</label>
         <input ng-model="users.name.first" type="text">
       </md-input-container>
-
       <md-input-container>
         <label for="label">Lastname</label>
         <input ng-model="users.name.last" type="text">
       </md-input-container>
-
       <md-input-container>
         <label for="label">Email</label>
         <input ng-model="users.email" type="email">
       </md-input-container>
-
       <div class="md-actions" layout="row" layout-align="center center">
         <md-button ng-click=" hide()" style="color: #FF0000;">Cancel</md-button>
-        <md-button ng-click ="editUser(users)" style="color: #90CAF9;" type="submit">Save</md-button>
+        <md-button ng-click="editUser(users)" style="color: #90CAF9;" type="submit">Save</md-button>
       </div>
-
     </form>
   </md-content>
-
 </div>
-

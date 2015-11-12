@@ -2,23 +2,21 @@
   <div class="md-toolbar-tools">
     <ng-md-icon icon="assignment" class="doc-icon" style="fill: white" size="32"></ng-md-icon>
     <a href="/#/home"><h4 class="md-title">DOC CACHE</h4></a>
-
+    
+    <!-- span right -->
     <span flex></span>
-
     <div layout="column" ng-controller="HomeCtrl as demo" ng-cloak>
-   
       <md-fab-speed-dial md-direction="left" md-open="demo.isOpen">
         <md-fab-trigger>
-
           <md-button aria-label="menu" class="md-fab md-primary">
-            <div class="doc-icon-right"><ng-md-icon icon="login" style="fill: white" size="32"></ng-md-icon></div>
+            <div class="doc-icon-right">
+              <ng-md-icon icon="login" style="fill: white" size="32"></ng-md-icon>
+            </div>
           </md-button>
-
         </md-fab-trigger>
-
         <md-fab-actions>
           <div ng-repeat="item in demo.items">
-            <md-button aria-label="{{item.name}}" class="md-fab md-raised md-mini"ng-href="{{item.href}}">
+            <md-button aria-label="{{item.name}}" class="md-fab md-raised md-mini" ng-href="{{item.href}}">
               <md-tooltip md-direction="bottom" md-visible="tooltipVisible">
                 {{item.name}}
               </md-tooltip>
@@ -27,8 +25,6 @@
           </div>
         </md-fab-actions>
       </md-fab-speed-dial>
-
     </div>
-
   </div>
 </md-toolbar>
