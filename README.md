@@ -1,6 +1,7 @@
 # Doc-Cache 
 
-This is an app which allows users to manage text documents online. Doc-Cache -built with the MEAN stack- is free and will always be :)
+This is an app which allows users to manage text documents online. To use Doc-Cache, clone this repository, ensure you have MongoDB running locally, install the required node modules, start the server locally and BANG! You're up and running. 
+Doc-Cache -built with the MEAN stack- is free and will always be :)
 
 # Contributing
 
