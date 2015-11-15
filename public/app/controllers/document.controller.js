@@ -30,6 +30,7 @@ angular.module('dmsApp')
     $scope.getDoc = function(id) {
       $window.sessionStorage.docId = id;
       DocumentService.getDoc(id).then(function(res) {
+        $location.url('/document');
         $scope.docs = res.data;
       }, function(err) {
       });
@@ -40,7 +41,7 @@ angular.module('dmsApp')
       var id = $window.sessionStorage.docId;
       DocumentService.editDoc(id, doc).then(function(res) {
         location.reload();
-        $location.url('/dashboard');
+        $location.url('/document');
         ToastService.showSimpleToast(res.data.message);
       }, function(err) {
         ToastService.showSimpleToast('Please Fill The Required Fields!');
