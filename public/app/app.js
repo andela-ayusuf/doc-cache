@@ -24,6 +24,11 @@ app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', '$locationP
         templateUrl: 'app/views/dashboard.view.html',
         controller: 'DashboardCtrl'
       })
+      .state('document', {
+        url: '/document',
+        templateUrl: 'app/views/document.view.html',
+        controller: 'DocumentCtrl'
+      })
       .state('profile', {
         url: '/profile',
         templateUrl: 'app/views/profile.view.html',
