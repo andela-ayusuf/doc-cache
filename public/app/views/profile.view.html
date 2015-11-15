@@ -3,14 +3,14 @@
 
 <!-- background picture -->
 <div style='position:absolute;z-index:0;left:0;top:0;width:100%;height:100%'>
-  <img src='../assets/imgs/tablet.jpg' style='width:100%;height:100%' />
+  <img src='../assets/imgs/apple.jpg' style='width:100%;height:100%' />
 </div>
 
 <!-- overlay -->
 <div class="overlay"></div>
 
 <!-- contents -->
-<md-content class="md-padding" id="prof">
+<!-- <md-content class="md-padding" id="prof"> -->
   <md-card ng-controller="DocumentCtrl" class="card" data-ng-init="getUser(); getUserDocs()">
     <img ng-src="../assets/imgs/profile-pic.jpg" class="profile-pic">
     <md-card-content class="pro-text">
@@ -24,4 +24,4 @@
       <md-button ng-click="getDoc(userDoc._id); deleteUserEv($event)" style="color: #FF0000">DELETE PROFILE</md-button>
     </div>
   </md-card>
-</md-content>
+<!-- </md-content> -->
