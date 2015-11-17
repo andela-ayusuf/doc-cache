@@ -6,26 +6,32 @@ var userSchema = new Schema({
   username: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
+    trim: true
   },
   name: {
     first: {
       type: String,
-      required: true
+      required: true,
+      trim: true
     },
     last: {
       type: String,
-      required: true
+      required: true,
+      trim: true
     }
   },
   email: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
+    trim: true,
+    match: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
   },
   password: {
     type: String,
-    required: true
+    required: true,
+    minlength: 5
   }
 });
 
