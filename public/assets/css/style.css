@@ -88,22 +88,13 @@ h1 {
   border-radius: 0.3em;
 }
 
-#tab-tab {
-  background-color: rgb(144,202,249);
-}
-
-#doc-tabs {
-  background: #fbfbfb;
-}
-
 #cDoc-but {
   color: rgb(144,202,249);
   float: right;
-  /*margin-left: -1.2em;*/
 }
 
-md-tabs > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {
-  color: rgb(0, 0, 0);
+md-input-container textarea.md-input {
+  min-height: 120px;
 }
 
 /*user profile*/
@@ -124,4 +115,15 @@ md-tabs > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item
 .pro-text p {
   font-size: 1.4em;
   text-align: center;
+}
+
+/*document page*/
+.md-whiteframe-1dp {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 3em;
+}
+
+.doc-page-p {
+  line-height: 2em;
 }
