@@ -9,26 +9,26 @@ exports.createDoc = function(req, res) {
 
   doc.save(function(err) {
     if (!doc.title) {
-      return res.status(403).send({
+      return res.status(401).send({
         success: false,
         message: 'Please Enter A Document Title!'
       });
     }
     else if (!doc.content) {
-      return res.status(403).send({
+      return res.status(401).send({
         success: false,
         message: 'Content Field Cannot Be Empty!'
       });
     }
     else if (err) {
       if (err.code === 11000) {
-        return res.status(403).send({
+        return res.status(401).send({
           success: false,
           message: 'Document Title Already Exists!'
         });
       }
       else {
-        return res.status(403).send(err);
+        return res.status(401).send(err);
       }
     }
     else {
