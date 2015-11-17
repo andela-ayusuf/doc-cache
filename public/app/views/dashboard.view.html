@@ -8,10 +8,10 @@
         <md-list>
           <md-list-item class="md-3-line" ng-repeat="userDoc in userDocs">
             <div class="md-list-item-text">
-              <h2>{{userDoc.title}}</h2>
+              <a ng-click="getDoc(userDoc._id);" style="cursor:pointer"><h2>{{userDoc.title}}</h2></a>
               <p>{{userDoc.content.substring(0, 250)}}...</p>
               <p>{{userDoc.lastModified | date}}</p>
-              <md-button style="float: right" ng-click="getDoc(userDoc._id);">Read More</md-button>
+              <md-button style="float: right; color: #90CAF9" ng-click="getDoc(userDoc._id);">Read More</md-button>
             </div>
             <md-divider ng-if="!$last"></md-divider>
           </md-list-item>
@@ -19,7 +19,7 @@
       </md-content>
     </div>
     <md-content class="md-padding">
-      <form>
+      <form class="form">
         <h3>ADD A NEW DOCUMENT</h3>
         <md-input-container>
           <label for="label">Title</label>
@@ -27,7 +27,7 @@
         </md-input-container>
         <md-input-container>
           <label for="content">Content</label>
-          <textarea aria-label="..." ng-model="docs.content" columns="2" md-maxlength="5000" ng-required="true"></textarea>
+          <textarea aria-label="..." ng-model="docs.content" row="6"columns="1" md-maxlength="5000" ng-required="true"></textarea>
         </md-input-container>
         <md-button ng-click="createDoc()" id="cDoc-but" type="submit">Add</md-button>
       </form>

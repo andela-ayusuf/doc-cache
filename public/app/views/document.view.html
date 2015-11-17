@@ -2,16 +2,16 @@
 <ng-include src="'app/views/dashNavBar.view.html'"></ng-include>
 
 <!-- document -->
-<div ng-controller="DocumentCtrl" layout="column" ng-cloak data-ng-init="getDoc(getDocId())">
-  <div ng-repeat="doc in docs" style="width: 85%; margin: 0 auto">
+<div ng-controller="DocumentCtrl" layout="column" ng-cloak data-ng-init="getDoc(getDocId())" class="md-whiteframe-1dp">
+  <div ng-repeat="doc in docs" style="width: 85%; margin: 0 auto; margin-top: 1em">
     <div>
       <h2 class="md-flex">{{doc.title}}</h2>
       <md-content flex layout-padding>
-        <p>{{doc.content}}</p>
+        <p class="doc-page-p">{{doc.content}}</p>
       </md-content>
     </div>
-    <md-button ng-click="getDoc(getDocId()); editDocEv($event)" style="color: #90CAF9;float: right;">EDIT</md-button>
     <md-button ng-click="getDoc(getDocId()); deleteDocEv($event)" href="/#/dashboard" style="color: #FF0000;float: right;">DELETE</md-button>
+    <md-button ng-click="getDoc(getDocId()); editDocEv($event)" style="color: #90CAF9;float: right;">EDIT</md-button>
   </div>
   <md-content flex layout-padding>
   </md-content>
