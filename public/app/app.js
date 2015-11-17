@@ -47,11 +47,10 @@ app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', '$locationP
             return config;
           },
           'responseError': function(response) {
-            if (response.status === 401 || response.status === 403) {
-              // $location.url('/home');
-              return $q.reject(response);
+            if (response.status === 403) {
+              $location.url('/home');
             }
-            // return $q.reject(response);
+            return $q.reject(response);
           }
         };
       }]);
