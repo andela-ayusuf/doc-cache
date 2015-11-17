@@ -43,7 +43,7 @@ describe('Document route test', function() {
     request.post('/api/documents')
     .set('x-access-token', token)
     .send(doc)
-    .expect(403)
+    .expect(401)
     .end(function(err, response) {
       expect(response.body).toEqual(jasmine.objectContaining({
         success: false,
@@ -60,7 +60,7 @@ describe('Document route test', function() {
     request.post('/api/documents')
     .set('x-access-token', token)
     .send(doc)
-    .expect(403)
+    .expect(401)
     .end(function(err, response) {
       expect(response.body).toEqual(jasmine.objectContaining({
         success: false,

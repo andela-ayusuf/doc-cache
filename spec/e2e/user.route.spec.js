@@ -221,7 +221,7 @@ describe('User route test', function() {
     .end(function(err, res) {
       expect(res.body).toEqual(jasmine.objectContaining( {
         success: false,
-        message: 'No token provided.'}));
+        message: 'Signup or Login.'}));
       done();
     });
   });
