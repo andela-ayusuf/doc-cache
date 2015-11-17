@@ -110,7 +110,7 @@ exports.middleware = function(req, res, next) {
   else {
     return res.status(403).send({
         success: false,
-        message: 'No token provided.'
+        message: 'Signup or Login.'
     });
   }
 };
