@@ -15,7 +15,12 @@ angular.module('dmsApp')
         $location.url('/dashboard');
         ToastService.showSimpleToast(res.data.message);
       }, function(err) {
-        ToastService.showSimpleToast(err.data.message);
+        if (err.data.message === 'User validation failed') {
+          ToastService.showSimpleToast('Password must be Five characters or more!');
+        }
+        else {
+          ToastService.showSimpleToast(err.data.message);
+        }
       });
     };
 
