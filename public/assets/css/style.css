@@ -62,7 +62,6 @@ h1 {
   text-decoration: underline;
 }
 
-
 /*signup page*/
 #sign-form {
   margin-top: 5em;
@@ -126,4 +125,15 @@ md-input-container textarea.md-input {
 
 .doc-page-p {
   line-height: 2em;
+}
+
+#menu {
+  position: fixed;
+  right: 0;
+  top: 90%;
+  z-index: 5;
+  background-color: white;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  box-shadow: 0 1px 1.5px black;
 }
