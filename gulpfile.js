@@ -7,7 +7,7 @@ var Server = require('karma').Server;
 
 // minify js files
 gulp.task('scripts', function() {
-  return gulp.src(['app/**/*.js', 'config/*.js', 'public/app/**/*.js'])
+  return gulp.src(['public/app/**/*.js'])
     .pipe(concat('main.js'))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
