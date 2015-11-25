@@ -31,5 +31,4 @@ gulp.task('test', function (done) {
 });
 
 // default Task
-gulp.task('default', ['scripts']);
-gulp.task('default', ['nodemon']);
+gulp.task('default', ['scripts', 'nodemon']);
