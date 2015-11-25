@@ -38,7 +38,7 @@ app.use(express.static(__dirname + '/../public'));
 
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', "Origin, Accept, Content-Type, Access-Control-Allow-Headers, x_access_admin, Authorization, X-Requested-With");
+  res.header('Access-Control-Allow-Headers', "Origin, Accept, Content-Type, Access-Control-Allow-Headers, x-access-token, x_access_admin, Authorization, X-Requested-With");
   res.header('Access-Control-Allow-Methods', "POST, PUT, DELETE, GET");
   next();
 });
