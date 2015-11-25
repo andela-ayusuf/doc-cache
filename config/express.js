@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var router = express.Router();
 var mongoose = require('mongoose');
+require('dotenv').load();
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var morgan = require('morgan');
