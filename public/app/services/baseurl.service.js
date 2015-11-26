@@ -1,2 +1,2 @@
 angular.module('dmsApp')
-  .value('baseUrl', 'http://localhost:5000');
+  .value('baseUrl', 'http://doc-cache.herokuapp.com');
