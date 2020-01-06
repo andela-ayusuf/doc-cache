@@ -27,7 +27,7 @@
     "jasmine-node": "^1.14.5",
     "jsonwebtoken": "^5.4.0",
     "method-override": "^2.3.5",
-    "mongoose": "^4.1.11",
+    "mongoose": "^5.8.4",
     "morgan": "^1.6.1",
     "path": "^0.12.7",
     "supertest": "^1.1.0"
